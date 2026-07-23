@@ -7,7 +7,9 @@ authors = [
     { name = "Andrei Shostak", email = "andrei.shostak@icloud.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "scikit-image>=0.26.0",
+]
 
 [project.scripts]
 palette-extractor = "palette_extractor:main"
