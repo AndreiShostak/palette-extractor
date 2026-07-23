@@ -21,9 +21,11 @@ class PaletteExtractor:
         new_H = (H * self.target_size) // min_side
         new_W = (W * self.target_size) // min_side
 
-        resized = transform.resize(img, (new_H, new_W), order=0)
+        resized = (transform.resize(img, (new_H, new_W), order=0) / 255).astype(
+            np.float32
+        )
 
-        return resized / 255.0
+        return resized
 
     def extract(self, image_path: str):
         img = self._load_image(image_path)
