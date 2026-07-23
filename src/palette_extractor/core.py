@@ -36,7 +36,7 @@ class PaletteExtractor:
 
         centers = kmeans.cluster_centers_
 
-        colors = centers * 255
+        colors = (centers * 255).astype(np.uint8)
 
         labels = kmeans.labels_
         counts = np.bincount(labels)
