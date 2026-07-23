@@ -23,7 +23,7 @@ class PaletteExtractor:
 
         resized = transform.resize(img, (new_H, new_W), order=0)
 
-        return resized
+        return resized / 255.0
 
     def extract(self, image_path: str):
         img = self._load_image(image_path)

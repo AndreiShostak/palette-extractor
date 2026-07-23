@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from palette-extractor!")
+from .core import PaletteExtractor
